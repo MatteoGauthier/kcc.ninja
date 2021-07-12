@@ -12,12 +12,12 @@ class MyDocument extends Document {
           <meta name="msapplication-config" content="/browserconfig.xml" />
           <meta name="msapplication-TileColor" content="#00003e" />
           <meta name="theme-color" content="#00003e" />
-          <meta name="description" content="Looking for a DEX, a swaping platform on the Kucoin Community Chain ? Find out KCC dApps of your need :D"/>
+          <meta name="description" content="Looking for a DEX, a swaping platform on the Kucoin Community Chain ? Find out KCC dApps of your need :D" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-          <Script async strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-VPKNXPXVTQ" />
-          <Script strategy="afterInteractive">
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VPKNXPXVTQ" />
+          <Script>
             {`<!-- Global site tag (gtag.js) - Google Analytics -->
  							 window.dataLayer = window.dataLayer || [];
  							 function gtag(){dataLayer.push(arguments);}
