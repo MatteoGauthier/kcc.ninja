@@ -4,14 +4,32 @@ import TwitterIcon from "./svg/TwitterIcon";
 import IconLayer from "./svg/IconLayer";
 import { motion } from "framer-motion";
 import createUrl from "../libs/url";
+function getDappsTags(el) {
+	const f = (term) => {
+		if (el.Tags.includes(term)) {
+			return el.tags;
+		}
+	};
+	let tagsElms = [];
+	switch (el.tags) {
+		case f("DEX"):
+			tagsElms.push(<span key="DEX" className=" text-emerald-300">DEX</span>);
+		case f("Farm"):
+			tagsElms.push(<span key="Farm" className=" text-yellow-300">Farm</span>);
+
+		default:
+			break;
+	}
+    return tagsElms
+}
 
 function DappRow({ dapp, variants }) {
 	return (
 		<>
 			<motion.div variants={variants} className=" block h-full w-full  card">
-				<div className="bg-black/60 rounded-t-xl py-1 flex px-3 justify-between">
-					<span className="text-emerald-300 text-xs ">DEX</span>
-					<div className="flex space-x-4 text-white">
+				<div className="bg-black/60 rounded-t-xl py-1 flex px-3 items-center justify-between">
+					<div className="flex space-x-3 text-xs items-center">{getDappsTags(dapp)}</div>
+					<div className="flex space-x-4 items-center text-white">
 						<a className="inline-flex text-sm space-x-1 items-center " href={"https://twitter.com/" + dapp.Twitter}>
 							<TwitterIcon /> <span> {dapp.Twitter}</span>
 						</a>
