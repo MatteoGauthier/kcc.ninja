@@ -57,7 +57,7 @@ export default function Home({ dapps }) {
               <DappRow variants={listItem} key={id} dapp={dapp} />
             ))}
           </motion.div>
-          <div className="h-96"></div>
+          <div className="h-36"></div>
         </main>
         <footer className="flex items-center justify-center py-4 space-x-4 mt-30 text-white/50">
           <a href="https://twitter.com/matteogauthier_">Twitter</a>

@@ -30,7 +30,9 @@ export function createUrl(string) {
   let url
   if (string.match(/^(http|https):\/\//i) === null) {
     url = "http://" + string
-  }
+  } else {
+		url = string
+	}
 
   return url
-}
+}	
