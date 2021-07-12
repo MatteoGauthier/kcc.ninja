@@ -6,8 +6,7 @@ import DappRow from "../components/DappRow"
 import { motion } from "framer-motion"
 import toast, { Toaster } from "react-hot-toast"
 import { useEffect } from "react"
-import { NextSeo } from "next-seo"
-import SEO from "../next-seo.config"
+import SEO from "../components/SEO"
 
 const container = {
   hidden: { opacity: 0 },
@@ -45,7 +44,7 @@ export default function Home({ dapps }) {
   }, [])
   return (
     <>
-      <NextSeo {...SEO} />
+      <SEO/>
       <Toaster onClick={() => (window.location = "https://airtable.com/shrts73IEZRbSfBZP")} />
       <div className="bg-no-repeat background-gradient ">
         <main className="flex flex-col max-w-screen-md px-4 mx-auto md:px-0">
