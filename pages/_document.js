@@ -16,16 +16,17 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VPKNXPXVTQ" />
-          <Script>
-            {`<!-- Global site tag (gtag.js) - Google Analytics -->
- 							 window.dataLayer = window.dataLayer || [];
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPKNXPXVTQ"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
  							 function gtag(){dataLayer.push(arguments);}
  							 gtag('js', new Date());
 
  							 gtag('config', 'G-VPKNXPXVTQ');
-						`}
-          </Script>
+								`,
+            }}
+          />
         </Head>
         <body>
           <Main />
