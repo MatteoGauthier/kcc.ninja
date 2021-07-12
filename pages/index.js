@@ -36,10 +36,10 @@ export default function Home({ dapps }) {
         {
           // icon: <IG className="w-6 h-6" />,
           position: "bottom-right",
-          duration: Infinity,
+          duration: 10000,
         }
       )
-    }, 1000)
+    }, 6000)
     return () => clearTimeout(timer)
   }, [])
   return (
