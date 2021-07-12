@@ -13,7 +13,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
     },
   },
 }
@@ -44,13 +44,13 @@ export default function Home({ dapps }) {
   }, [])
   return (
     <>
-      <SEO/>
+      <SEO />
       <Toaster onClick={() => (window.location = "https://airtable.com/shrts73IEZRbSfBZP")} />
       <div className="bg-no-repeat background-gradient ">
         <main className="flex flex-col max-w-screen-md px-4 mx-auto md:px-0">
           <div className="mt-12 xl:mt-32 md:mt-20">
-            <h1 className="text-4xl font-semibold text-primary ">kcc.ninja</h1>
-            <p className="text-white/90 ">List of dApps of the KCC ecosytem</p>
+            <h1 className="text-4xl font-semibold text-primary ">Welcome to the KCC Community.</h1>
+            <p className="text-white/90 ">We are a Kucoin Community Chain project list. We have dApps, farms, dex and games for you to find what you need on the blockchain.</p>
           </div>
           <motion.div variants={container} className="flex-col mt-6 space-y-2 rounded-2xl" initial="hidden" animate="show">
             {dapps.map(({ id, fields: dapp }) => (
