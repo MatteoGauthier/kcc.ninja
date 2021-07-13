@@ -6,15 +6,14 @@ import DappRow from "../components/DappRow"
 import { motion } from "framer-motion"
 import toast, { Toaster } from "react-hot-toast"
 import { useEffect } from "react"
-import { NextSeo } from "next-seo"
-import SEO from "../next-seo.config"
+import SEO from "../components/SEO"
 
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
     },
   },
 }
@@ -37,28 +36,28 @@ export default function Home({ dapps }) {
         {
           // icon: <IG className="w-6 h-6" />,
           position: "bottom-right",
-          duration: Infinity,
+          duration: 10000,
         }
       )
-    }, 1000)
+    }, 6000)
     return () => clearTimeout(timer)
   }, [])
   return (
     <>
-      <NextSeo {...SEO} />
+      <SEO />
       <Toaster onClick={() => (window.location = "https://airtable.com/shrts73IEZRbSfBZP")} />
       <div className="bg-no-repeat background-gradient ">
         <main className="flex flex-col max-w-screen-md px-4 mx-auto md:px-0">
           <div className="mt-12 xl:mt-32 md:mt-20">
-            <h1 className="text-4xl font-semibold text-primary ">kcc.ninja</h1>
-            <p className="text-white/90 ">List of dApps of the KCC ecosytem</p>
+            <h1 className="text-4xl font-semibold text-primary ">Welcome to the KCC Community.</h1>
+            <h2 className="text-white/90 ">We are a Kucoin Community Chain project list. We have dApps, farms, dex and games for you to find what you need on the blockchain.</h2>
           </div>
           <motion.div variants={container} className="flex-col mt-6 space-y-2 rounded-2xl" initial="hidden" animate="show">
             {dapps.map(({ id, fields: dapp }) => (
               <DappRow variants={listItem} key={id} dapp={dapp} />
             ))}
           </motion.div>
-          <div className="h-96"></div>
+          <div className="h-36"></div>
         </main>
         <footer className="flex items-center justify-center py-4 space-x-4 mt-30 text-white/50">
           <a href="https://twitter.com/matteogauthier_">Twitter</a>
