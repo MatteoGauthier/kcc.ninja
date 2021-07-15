@@ -10,6 +10,7 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <link rel="manifest" href="/site.webmanifest" />
           <meta name="msapplication-config" content="/browserconfig.xml" />
+          <meta name="keywords" content="kucoin, kcc, crypto, community, list, money, farm, yield"/>
           <meta name="msapplication-TileColor" content="#00003e" />
           <meta name="theme-color" content="#00003e" />
           <meta name="description" content="Looking for a DEX, a swaping platform on the Kucoin Community Chain ? Find out KCC dApps of your need :D" />
